@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React,{ useState,useEffect } from "react";
 import { Form,Input,Button,Checkbox,message,Spin } from "antd";
 import "../resources/authentication.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,7 +6,7 @@ import axios from "axios";
 
 function Register(){
     const [loading,setLoading]=useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const onFinish = async(values)=>{
         setLoading(true)
         try{
@@ -20,6 +20,12 @@ function Register(){
          message.error("Login failed");
      } 
  };
+ useEffect(()=>{
+    if(localStorage.getItem('CVWizard-user'))
+    {
+      navigate('/home')
+    }
+  })
     return(
         <div className="parent">
             {loading && (<Spin size="large"/>)}
