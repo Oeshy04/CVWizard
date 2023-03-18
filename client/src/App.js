@@ -3,6 +3,7 @@ import './App.css';
 import "antd/dist/antd.min.css"
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Profile from './pages/Profile';
 import Templates from './pages/templates';
 import Register from './pages/Register';
 import { Button, Space } from 'antd';
@@ -15,8 +16,9 @@ function App() {
       <Button type='primary'>Create CV</Button> */}
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/templates/:id" element={<Templates/>}/>
