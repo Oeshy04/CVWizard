@@ -28,6 +28,11 @@ function DefaultLayout(props) {
     <div className="layout">
       <div className="header">
         <h1 onClick={()=>navigate('/home')} style={{cursor:'pointer'}}>CVWizard</h1>
+        <div>
+        <Button className="header_buttons" onClick={() => navigate('/mainpage')}>Home</Button>
+        <Button className="header_buttons" onClick={() => navigate('/profile')}>Profile</Button>
+        <Button className="header_buttons" onClick={() => navigate('/community')}>Community</Button>
+        <Button className="header_buttons" onClick={() => navigate('/home')}>Templates</Button></div>
         <Dropdown overlay={menu} placement="bottomLeft">
           <Button icon={<UserOutlined />}>{user.username}</Button>
         </Dropdown>
