@@ -3,6 +3,7 @@ import './App.css';
 import "antd/dist/antd.min.css"
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Templates from './pages/templates';
 import Register from './pages/Register';
 import { Button, Space } from 'antd';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
@@ -18,6 +19,7 @@ function App() {
           <Route path="/home" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/templates/:id" element={<Templates/>}/>
         </Routes>
       </BrowserRouter>
 
