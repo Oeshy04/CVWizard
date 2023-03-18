@@ -26,6 +26,7 @@ function Templates() {
     <DefaultLayout>
       <div className="d-flex justify-content-end my-5 mx-5">
         <Button className="back-btn" onClick={()=>navigate('/home')}>Back</Button>
+        
         <Button className="mx-5" onClick={handlePrint}>Print</Button>
         {/* <button onClick={handlePrint}>Print this out!</button> */}
 
