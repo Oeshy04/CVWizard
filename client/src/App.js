@@ -8,6 +8,7 @@ import Templates from './pages/templates';
 import Register from './pages/Register';
 import { Button, Space } from 'antd';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import LandingPage from './pages/LandingPage';
 function App() {
   return (
     <div className="App">
@@ -16,12 +17,13 @@ function App() {
       <Button type='primary'>Create CV</Button> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/templates/:id" element={<Templates/>}/>
+          <Route path="/" element={<LandingPage/>}/>
         </Routes>
       </BrowserRouter>
 

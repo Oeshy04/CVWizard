@@ -1,0 +1,16 @@
+
+.centerit{
+    text-align: center;
+}
+
+
+
+.body{
+    
+        /* background-image: url('https://blog.tubikstudio.com/wp-content/uploads/2018/02/illustration_design_in_progress_tubik.png'); */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        margin: auto;
+      
+}
