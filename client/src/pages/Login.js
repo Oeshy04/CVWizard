@@ -1,13 +1,21 @@
 import React from "react";
-import { Form,Input,Button,Checkbox } from "antd";
-import "./resources/authentication.css";
-import { Link } from "react-router-dom";
+import { Form,Input,Button,Checkbox,message } from "antd";
+import "../resources/authentication.css";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-function Login(){
-
-    const onFinish = (values)=>{
-        console.log(values);
-    }
+function Register(){
+    const navigate = useNavigate()
+    const onFinish = async(values)=>{
+        try{
+         const user= await axios.post('api/user/login', values)
+         message.success("Logged in successfully");
+         localStorage.setItem('CVWizard-user',JSON.stringify(user.data))
+        navigate('/home')
+        } catch(error){
+         message.error("Login failed");
+     } 
+ };
     return(
         <div className="parent">
             <Form layout="vertical" onFinish={onFinish}>
@@ -18,7 +26,7 @@ function Login(){
                 </Form.Item>
 
                 <Form.Item name="password" label="Password">
-                    <Input/>
+                    <Input type="password"/>
                 </Form.Item>
                 <div className="d-flex align-items-center justify-content-between">
 
@@ -31,4 +39,4 @@ function Login(){
             </div>
     )
 }
-export default Login
+export default Register

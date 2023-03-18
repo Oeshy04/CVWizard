@@ -1,14 +1,14 @@
 import React from "react";
 import { Form,Input,Button,Checkbox, message } from "antd";
 import { Link } from "react-router-dom";
-import "./resources/authentication.css";
+import "../resources/authentication.css";
 import axios from "axios";
 
 function Register(){
 
     const onFinish = async(values)=>{
        try{
-        await axios.post('/api/user/register', values)
+        await axios.post('api/user/register', values)
         message.success('Registered successfully')
        } catch(error){
         message.error("Registration failed")
@@ -24,11 +24,11 @@ function Register(){
                 </Form.Item>
 
                 <Form.Item name="password" label="Password">
-                    <Input/>
+                    <Input type="password"/>
                 </Form.Item>
 
                 <Form.Item name="cpassword" label="Confirm Password">
-                    <Input/>
+                    <Input type="password"/>
                 </Form.Item>
 
                 <div className="d-flex align-items-center justify-content-between">

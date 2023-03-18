@@ -1,5 +1,5 @@
 import React from 'react';
-import './../pages/resources/defaultlayout.css';
+import './../resources/defaultlayout.css';
 
 function DefaultLayout(props){
     return(

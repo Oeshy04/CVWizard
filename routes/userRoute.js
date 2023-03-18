@@ -3,19 +3,22 @@ const User = require("../models/userModels");
 const app = express.Router();
 
 app.post("/login", async (req, res) => {
-    try {
-      const result = await User.findOne({
-        username: req.body.username,
-        password: req.body.password,
-      });
-  
-      if(result.length){
-        res.send("Login Successful")
-      }
-    } catch (error) {
-      res.status(400).json(error);
+  try {
+    const result = await User.findOne({
+      username: req.body.username,
+      password: req.body.password,
+    });
+
+    if (result) {
+      res.send(result);
+    } else {
+      res.status(400).json("Login failed");
     }
-  });
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
 
   app.post("/register", async (req, res) => {
     try {
