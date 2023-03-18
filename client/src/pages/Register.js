@@ -34,7 +34,16 @@ useEffect(()=>{
                     <Input/>
                 </Form.Item>
 
-                <Form.Item name="password" label="Password">
+                <Form.Item name="password" label="Password"
+                rules={[
+                    { required: true },
+                    { min: 8, message: 'Password must be at least 8 characters long' },
+                    { max: 16 },
+                    { pattern: /(?=.*[A-Z])/g, message: 'Password must contain at least one uppercase letter' },
+                    { pattern: /(?=.*[a-z])/g, message: 'one lowercase letter' },
+                    { pattern: /(?=.*[0-9])/g, message: 'one number' },
+                    { pattern: /(?=.*[!@#$%^&*])/g, message: 'one special character' },
+                  ]}>
                     <Input type="password"/>
                 </Form.Item>
 
