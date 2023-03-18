@@ -19,7 +19,7 @@ function Register(){
 };
     return(
         <div className="parent">
-            {!loading && (<Spin size="large"/>)}
+            {loading && (<Spin size="large"/>)}
             <Form layout="vertical" onFinish={onFinish}>
                 <h1>Register</h1>
                 <hr></hr>
