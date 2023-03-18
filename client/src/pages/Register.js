@@ -1,21 +1,25 @@
-import React from "react";
-import { Form,Input,Button,Checkbox, message } from "antd";
+import React, { useState } from "react";
+import { Form,Input,Button,Checkbox, message, Spin } from "antd";
 import { Link } from "react-router-dom";
 import "../resources/authentication.css";
 import axios from "axios";
 
 function Register(){
-
+    const [loading,setLoading]=useState(false);
     const onFinish = async(values)=>{
+        setLoading(true)
        try{
         await axios.post('api/user/register', values)
+        setLoading(false);
         message.success('Registered successfully')
        } catch(error){
+        setLoading(false);
         message.error("Registration failed")
     } 
 };
     return(
         <div className="parent">
+            {!loading && (<Spin size="large"/>)}
             <Form layout="vertical" onFinish={onFinish}>
                 <h1>Register</h1>
                 <hr></hr>
