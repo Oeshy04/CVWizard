@@ -1,16 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react';
 import DefaultLayout from '../components/DefaultLayout'
-import { Form, Tabs, Button } from 'antd';
+import { Form, Tabs, Button,message,Spin} from 'antd';
 import PersonalInfo from '../components/PersonalInfo';
 import SkillsEducation from '../components/SkillsEducation';
 import ExperienceProjects from '../components/ExperienceProjects';
+import axios from "axios";
+
 const {TabPane} = Tabs;
 function Profile() {
+
+  const [loading,setLoading]=useState(false);
+  const onFinish = async(values)=>{
+    setLoading(true)
+   try{
+    await axios.post('api/user/register', values)
+    setLoading(false);
+    message.success('Registered successfully')
+   } catch(error){
+    setLoading(false);
+    message.error("Registration failed")
+} 
+};
   return (
     <DefaultLayout>
+       {loading && (<Spin size="large"/>)}
     <div className="update-profile">
         <h2>Update Profile</h2>
-        <Form layout="vertical" onFinish={(values)=>console.log(values)}>
+        <Form layout="vertical" onFinish={onFinish}>
           <Tabs defaultActiveKey="1">
             <TabPane tab="Personal Info" key="1">
             <PersonalInfo />
