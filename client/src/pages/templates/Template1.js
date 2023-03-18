@@ -94,4 +94,3 @@ function Template1() {
 }
 
 export default Template1;
-// <Route path="/templates/:id element={<Templates/>}/>"

@@ -4,7 +4,8 @@
     box-shadow: 0 0 3px gray;
    padding: 20px;
    position: relative;
-   width: 350px;
+   margin-top: auto;
+   width: 400px;
 }
 
 .home .template .text{

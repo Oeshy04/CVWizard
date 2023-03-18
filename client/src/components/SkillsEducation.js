@@ -16,7 +16,7 @@ function SkillsEducation() {
                   <Form.Item
                     {...restField}
                     name={[name, "qualification"]}
-                    rules={[{ required: true, message: "Missing first name" }]}
+                    rules={[{ required: true, message: "Missing qualification" }]}
                   >
                     <Input placeholder="Qualification" />
                   </Form.Item>
@@ -26,9 +26,9 @@ function SkillsEducation() {
                   <Form.Item
                     {...restField}
                     name={[name, "percentage"]}
-                    rules={[{ required: true, message: "Missing first name" }]}
+                    rules={[{ required: true, message: "Missing percentage/gps" }]}
                   >
-                    <Input placeholder="Percentage" />
+                    <Input placeholder="Percentage/GPA" />
                   </Form.Item>
                   </div>
 
@@ -36,7 +36,7 @@ function SkillsEducation() {
                   <Form.Item
                     {...restField}
                     name={[name, "institution"]}
-                    rules={[{ required: true, message: "Missing first name" }]}
+                    rules={[{ required: true, message: "Missing institution name" }]}
                   >
                     <Input placeholder="Institution" />
                   </Form.Item>
@@ -45,7 +45,7 @@ function SkillsEducation() {
                   <Form.Item
                     {...restField}
                     name={[name, "range"]}
-                    rules={[{ required: true, message: "Missing first name" }]}
+                    rules={[{ required: true, message: "Missing academic/experience years" }]}
                   >
                     <Input placeholder="Year Range" />
                   </Form.Item>
