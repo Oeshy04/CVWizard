@@ -14,12 +14,13 @@
 }
 
 .header h1{
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 22px;
+    color: rgb(253, 251, 251);
+    font-size: 30px;
+    text-align: center;
 }
 .header button{
     border: 1px solid white !important;
-    color: rgba(255, 255, 255, 0.589) !important;
+    color: rgb(255, 255, 255) !important;
 }
 .content{
     height: 87%;

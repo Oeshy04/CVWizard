@@ -44,7 +44,7 @@ function Profile() {
             <ExperienceProjects /> 
             </TabPane>
           </Tabs>
-          <Button htmlType="submit">UPDATE</Button>
+          <Button htmlType="submit"style={{color:'white'}}>UPDATE</Button>
         </Form>
       </div>
     </DefaultLayout>
