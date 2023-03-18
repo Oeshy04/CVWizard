@@ -27,7 +27,7 @@ function Register(){
 
                 <div className="d-flex align-items-center justify-content-between">
 
-                <Link to='/register'>Click here to Login</Link>
+                <Link to='/login'>Click here to Login</Link>
                 <Button type="primary" htmlType="submit">
                     Register
                 </Button>
