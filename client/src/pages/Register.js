@@ -28,7 +28,7 @@ useEffect(()=>{
         <div className="parent">
             {loading && (<Spin size="large"/>)}
             <Form layout="vertical" onFinish={onFinish}>
-                <h1>Register</h1>
+            <p style={{display:'inline'}}><h1 >Register to <h1 style={{color:'teal'}}>CVWizard</h1></h1></p>
                 <hr></hr>
                 <Form.Item name="username" label="Username">
                     <Input/>

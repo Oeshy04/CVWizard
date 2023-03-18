@@ -27,10 +27,12 @@ function Register(){
     }
   })
     return(
+        <div>
         <div className="parent">
+            
             {loading && (<Spin size="large"/>)}
             <Form layout="vertical" onFinish={onFinish}>
-                <h1>Login</h1>
+                <p style={{display:'inline'}}><h1 >Login to <h1 style={{color:'teal'}}>CVWizard</h1></h1></p>
                 <hr></hr>
                 <Form.Item name="username" label="Username">
                     <Input/>
@@ -47,6 +49,7 @@ function Register(){
                 </Button>
                 </div>
             </Form>
+            </div>
             </div>
     )
 }
