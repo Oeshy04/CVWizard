@@ -9,6 +9,7 @@ import Register from './pages/Register';
 import { Button, Space } from 'antd';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LandingPage from './pages/LandingPage';
+import Mainpage from './pages/Mainpage';
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
           <Route path="/register" element={<Register/>}/>
           <Route path="/templates/:id" element={<ProtectedRoute><Templates /></ProtectedRoute>} />
           <Route path="/" element={<LandingPage/>}/>
+          <Route path="/mainpage" element={<Mainpage/>}/>
         </Routes>
       </BrowserRouter>
 

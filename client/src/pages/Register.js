@@ -21,7 +21,7 @@ function Register(){
 useEffect(()=>{
     if(localStorage.getItem('CVWizard-user'))
     {
-      navigate('/home')
+      navigate('/mainpage')
     }
   })
     return(

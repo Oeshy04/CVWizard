@@ -10,11 +10,11 @@ function Home(){
     const navigate = useNavigate();
     const templates=[
         {
-            title:'Simple CV',
+            title:'Academia',
             image: templateimg
         },
         {
-          title: "Highlighted Sections Resume",
+          title: "Industry",
           image: template2img,
         },
     ]
