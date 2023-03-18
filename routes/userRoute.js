@@ -2,7 +2,7 @@ const express = require("express");
 const User = require("../models/userModels");
 const app = express.Router();
 
-app.get("/login", async (req, res) => {
+app.post("/login", async (req, res) => {
     try {
       const result = await User.findOne({
         username: req.body.username,
@@ -17,7 +17,7 @@ app.get("/login", async (req, res) => {
     }
   });
 
-  app.get("/register", async (req, res) => {
+  app.post("/register", async (req, res) => {
     try {
       const newuser = new User(req.body);
       await newuser.save();

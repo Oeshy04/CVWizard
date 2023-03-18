@@ -1,13 +1,19 @@
 import React from "react";
-import { Form,Input,Button,Checkbox } from "antd";
+import { Form,Input,Button,Checkbox, message } from "antd";
 import { Link } from "react-router-dom";
 import "./resources/authentication.css";
+import axios from "axios";
 
 function Register(){
 
-    const onFinish = (values)=>{
-        console.log(values);
-    }
+    const onFinish = async(values)=>{
+       try{
+        await axios.post('/api/user/register', values)
+        message.success('Registered successfully')
+       } catch(error){
+        message.error("Registration failed")
+    } 
+};
     return(
         <div className="parent">
             <Form layout="vertical" onFinish={onFinish}>
