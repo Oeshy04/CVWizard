@@ -3,6 +3,8 @@ import { Form,Input,Button,Checkbox,message,Spin } from "antd";
 import "../resources/authentication.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import DefaultLayout from "../components/DefaultLayout";
+
 
 function Register(){
     const [loading,setLoading]=useState(false);
@@ -28,6 +30,7 @@ function Register(){
   })
     return(
         <div>
+            
         <div className="parent">
             
             {loading && (<Spin size="large"/>)}
@@ -51,6 +54,6 @@ function Register(){
             </Form>
             </div>
             </div>
-    )
+    );
 }
 export default Register
