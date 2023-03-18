@@ -10,30 +10,25 @@ function Templates() {
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
-  // const params = useParams();
-   const navigate = useNavigate()
-  // const gettemplate = () => {
-  //   switch (params.id) {
-  //     case "1": {
-  //       return <Template1 />;
-  //     }
-  //     case "2": {
-  //       return <Template2 />;
-  //     }
-  //   }
-  // };
+  const params = useParams();
+  const navigate = useNavigate()
+  const gettemplate = () => {
+    switch (params.id) {
+      case "1": {
+        return <Template1 />;
+      }
+      case "2": {
+        return <Template2 />;
+      }
+    }
+  };
   return (
     <DefaultLayout>
       <div className="d-flex justify-content-end my-5 mx-5">
         <Button className="back-btn" onClick={()=>navigate('/home')}>Back</Button>
-        
         <Button className="mx-5" onClick={handlePrint}>Print</Button>
-        {/* <button onClick={handlePrint}>Print this out!</button> */}
-
       </div>
-      <Template1 ref={componentRef} />
-      
-      
+      <div ref={componentRef}>{gettemplate()}</div>
     </DefaultLayout>
   );
 }

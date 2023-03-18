@@ -31,7 +31,7 @@ function Home() {
                 />
                 <div className="text">
                   <p>{template.title}</p>
-                  <button onClick={() => navigate('/templates/1')}>
+                  <button onClick={() => navigate(`/templates/${index + 1}`)}>
                     TRY
                   </button>
                 </div>

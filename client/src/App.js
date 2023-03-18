@@ -23,7 +23,7 @@ function App() {
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
-          <Route path="/templates/1" element={<ProtectedRoute><Templates/> </ProtectedRoute>} />
+          <Route path="/templates/:id" element={<ProtectedRoute><Templates/> </ProtectedRoute>} />
           <Route path="/" element={<LandingPage/>}/>
           <Route path="/mainpage" element={<Mainpage/>}/>
         </Routes>
