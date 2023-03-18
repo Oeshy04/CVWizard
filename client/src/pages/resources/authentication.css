@@ -1,26 +1,16 @@
-.layout{
+.parent{
     height: 100vh;
-    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.header{
-    height:20%;
-    background-color: teal;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-.header h1{
-    color: rgba(255, 255, 255, 0.5);
+.parent h1{
     font-size: 22px;
+    font-weight: bold;
 }
-.content{
-    height: 87%;
-    border: 1px solid gray;
-    margin-top: 5px;
+.parent form{
+    width: 400px;
     box-shadow: 0 0 3px gray;
-    padding: 10px;
-    
+    padding: 20px;
 }
