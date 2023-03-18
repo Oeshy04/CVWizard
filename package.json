@@ -1,0 +1,25 @@
+{
+  "name": "team-noobs_cvwizard",
+  "version": "1.0.0",
+  "description": "A website that helps users create a professional-looking resume. \r CVWizard is aimed at creating a web-based application that allows users to create, edit, and customize professional-looking CVs quickly and easily. \r The app will provide users with a range of customizable templates to choose from, enabling them to create a unique and eye-catching CV that best showcases their skills,\r experience, and achievements.",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oeshy04/Team-Noobs_CVWizard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oeshy04/Team-Noobs_CVWizard/issues"
+  },
+  "homepage": "https://github.com/Oeshy04/Team-Noobs_CVWizard#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7",
+    "nodemon": "^2.0.15"
+  }
+}
