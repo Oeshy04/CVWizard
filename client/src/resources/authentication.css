@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(218, 238, 238);
 }
 
 .parent h1{
@@ -13,4 +14,5 @@
     width: 400px;
     box-shadow: 0 0 3px gray;
     padding: 20px;
+    background-color: white;
 }
