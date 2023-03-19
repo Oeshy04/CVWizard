@@ -32,6 +32,7 @@ function DefaultLayout(props) {
         <Button className="header_buttons" onClick={() => navigate('/mainpage')}>Home</Button>
         <Button className="header_buttons" onClick={() => navigate('/profile')}>Profile</Button>
         <Button className="header_buttons" onClick={() => navigate('/community')}>Community</Button>
+        <Button className="header_buttons" onClick={() => navigate('/cover')}>Cover Letter</Button>
         <Button className="header_buttons" onClick={() => navigate('/home')}>Templates</Button></div>
         <Dropdown overlay={menu} placement="bottomLeft">
           <Button icon={<UserOutlined />}>{user.username}</Button>

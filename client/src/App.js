@@ -10,6 +10,8 @@ import { Button, Space } from 'antd';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LandingPage from './pages/LandingPage';
 import Mainpage from './pages/Mainpage';
+import CoverLetterForm from './pages/coverletter';
+import Community from './pages/Community';
 function App() {
   return (
     <div className="App">
@@ -25,7 +27,10 @@ function App() {
           <Route path="/register" element={<Register/>}/>
           <Route path="/templates/:id" element={<ProtectedRoute><Templates/> </ProtectedRoute>} />
           <Route path="/" element={<LandingPage/>}/>
-          <Route path="/mainpage" element={<Mainpage/>}/>
+          <Route path="/mainpage" element={<ProtectedRoute><Mainpage/></ProtectedRoute>}/>
+          <Route path="/cover" element={<ProtectedRoute><CoverLetterForm/></ProtectedRoute>}/>
+          <Route path="/community" element={<ProtectedRoute><Community/></ProtectedRoute>}/>
+
         </Routes>
       </BrowserRouter>
 

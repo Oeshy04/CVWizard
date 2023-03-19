@@ -11,7 +11,7 @@ function Mainpage(){
         <DefaultLayout>
             <h1 style={{textAlign:'center'}}>Hello, {user.username}</h1>
             <h3 style={{textAlign:'center'}}>Let's Get You Started!</h3>
-            <Button><Link to="/home" className="container">Make Your CV</Link></Button>
+            <Button><Link to="/home" className="container" style={{marginLeft:'auto'}}>Make Your CV</Link></Button>
         </DefaultLayout>
     )
 }

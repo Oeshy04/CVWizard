@@ -16,7 +16,7 @@ function Register(){
          message.success("Logged in successfully");
          localStorage.setItem('CVWizard-user',JSON.stringify(user.data))
          setLoading(false)
-        navigate('/home')
+        navigate('/mainpage')
         } catch(error){
             setLoading(false)
          message.error("Login failed");

@@ -35,7 +35,7 @@ function Template1() {
               </h6>
               <p>
                 <b>{education.qualification}</b> with{" "}
-                <b>{education.percentage}%</b> in {education.institution}
+                <b>{education.percentage}</b> in {education.institution}
               </p>
             </div>
           );

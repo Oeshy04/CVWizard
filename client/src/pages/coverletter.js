@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Form, Input, Button, message,Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import axios from 'axios';
-import "../resources/coverletter.css"
+import "../resources/defaultlayout.css"
 import DefaultLayout from '../components/DefaultLayout';
+
 
 
 const { TextArea } = Input;

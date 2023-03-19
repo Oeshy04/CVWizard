@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.post('/', upload.single('file'), async (req, res) => {
+router.post('/cover', upload.single('file'), async (req, res) => {
   const { filename, mimetype, size } = req.file;
   const { name, email, message } = req.body;
   try {
